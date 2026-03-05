@@ -4,21 +4,19 @@ import nyla.solutions.core.io.IO;
 import nyla.solutions.core.io.csv.CsvWriter;
 import nyla.solutions.core.patterns.creational.generator.JavaBeanGeneratorCreator;
 import nyla.solutions.core.util.Config;
-import ai.data.pipeline.spring.customer.domain.Customer;
+import rr.userdetails.userbatch.domain.User;
 
 import java.io.IOException;
 import java.nio.file.Paths;
 
 /**
- * Generate random customer records in CSV
- *
- *
+ * Generate user records
  */
 public class CsvTextFileGenerator {
 
     public static void main(String[] args) throws IOException {
 
-        var customerCreator = JavaBeanGeneratorCreator.of(Customer.class);
+        var userCreator = JavaBeanGeneratorCreator.of(User.class);
 
         var settings = Config.settings();
 
@@ -29,7 +27,7 @@ public class CsvTextFileGenerator {
         //id,first_name,last_nm,email,phone,address line,city,state,zip
         var count = settings.getPropertyInteger("count",100);
 
-        var customer = customerCreator.create();
+        var user = userCreator.create();
         //missing firstname and lastname and email
         //seconds missing phone and email
         csvWriter.appendRow(
@@ -38,14 +36,14 @@ public class CsvTextFileGenerator {
                 "",
                 "",
                 "",
-                customer.location().address(),
-                customer.location().city(),
-                customer.location().state(),
-                customer.location().zip()
+                user.location().address(),
+                user.location().city(),
+                user.location().state(),
+                user.location().zip()
         );
 
 
-        customer = customerCreator.create();
+        user = userCreator.create();
         //seconds missing phone and email
         csvWriter.appendRow(
                 "",
@@ -53,25 +51,25 @@ public class CsvTextFileGenerator {
                 "",
                 "",
                 "",
-                customer.location().address(),
-                customer.location().city(),
-                customer.location().state(),
-                customer.location().zip()
+                user.location().address(),
+                user.location().city(),
+                user.location().state(),
+                user.location().zip()
         );
 
         //all records have all required fields
         for (int i = 2; i < count; i++) {
-            customer = customerCreator.create();
+            user = userCreator.create();
                 csvWriter.appendRow(
-                        customer.contact().email(),
-                        customer.firstName(),
-                        customer.lastName(),
-                        customer.contact().email(),
-                        customer.contact().phone(),
-                        customer.location().address(),
-                        customer.location().city(),
-                        customer.location().state(),
-                        customer.location().zip()
+                        user.contact().email(),
+                        user.firstName(),
+                        user.lastName(),
+                        user.contact().email(),
+                        user.contact().phone(),
+                        user.location().address(),
+                        user.location().city(),
+                        user.location().state(),
+                        user.location().zip()
                 );
             }
     }
