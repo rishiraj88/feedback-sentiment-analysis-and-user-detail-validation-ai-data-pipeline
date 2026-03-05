@@ -1,0 +1,14 @@
+package rr.userdetails.userbatch;
+
+import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class UserbatchApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(UserbatchApplication.class, args);
+	}
+
+}
