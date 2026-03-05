@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>rr.userdetails</groupId>
-	<artifactId>user-batch</artifactId>
+	<artifactId>userbatch</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>user-batch</name>
-	<description>user-batch</description>
+	<name>userbatch</name>
+	<description>userbatch</description>
 	<url/>
 	<licenses>
 		<license/>
