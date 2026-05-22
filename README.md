@@ -1,8 +1,9 @@
-# feedback-sentiment-analysis-and-user-detail-validation-ai-data-pipeline
-feedback sentiment analysis and user detail validation: AI data pipeline with Spring, OLLAMA, Falcons AI, JUnit and more
+# Feedback Sentiment Analysis and User Detail Validation: AI Data Pipeline
+Feedback sentiment analysis and user detail validation
+- AI-ready data pipeline with Spring, OLLAMA, Falcons AI and JUnit
 
 # Technical Documentation
-The documentaion here is continually being updated, so kindly bear with the development saga. The code, however, is the ultimate "source of truth".
+The documentaion here is continually being updated, so kindly bear with the continuous improvement practice. The code is always the ultimate "source of truth".
 
 The project dependencies of User Batch:
 - ![dependencies of User Batch](./assets/pictures/userbatch-project-model.png)
